@@ -1,32 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Navbar />
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import {mapActions} from 'vuex'
+import Navbar from "./components/navbar/Navbar.vue"
+export default {
+  name: 'app',
+  components: {Navbar},
+  methods: {
+    ...mapActions([
+            "GET_STORE_API"// подключении к api
+        ])
+  },
+  created() {
+    this.GET_STORE_API()
   }
 }
+</script>
+
+<style lang="sass">
+*
+  padding: 0
+  margin: 0
 </style>

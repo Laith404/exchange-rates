@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap')
+  
+$bg-color: #ffffff
+$border-color: #8684E0
+$text-color: #000000
+$line-height: 1.65
+$link-color: #0d012e
+
+input, textarea 
+  outline: none 
+  &:focus:required:invalid 
+    border-color: red
+  &:required:valid 
+    border-color: green
+
+html, body
+  width: 100%
+  height: auto
+
+body 
+  position: relative
+  overflow-x: hidden
+  margin: 0
+  padding: 0
+  min-height: 100%
+  font-family: "Rubik", sans-serif
+  font-size: 1rem
+  line-height: $line-height
+  color: $text-color
+  background: $bg-color
+
+
+h1,h2,h3,h4,h5,h6
+  margin: 0
+  padding: 0
+  line-height: 1
+  
+p 
+  margin: 0
+  padding: 0
+  line-height: 1
+
+ul 
+  margin: 0
+  padding: 0
+  list-style: none
+
+a, a:hover
+  text-decoration: none
+
+img
+  user-select: none
+  pointer-events: none
+
+.wrapper
+  position: relative
+  overflow: hidden
+  width: 100%
+  padding: 0
+  min-width: 20rem
+  min-height: 100%
+
+.container
+  width: auto
+  padding: 0 .9375rem
+  margin: 0 auto
+  max-width: 90rem
+  display: block
+  position: relative
+
+.content
+    margin: 2.5rem 0
+
+
+
+@media screen and ( max-width: 90rem )
+    .container 
+        max-width: 75rem
+
