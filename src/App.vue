@@ -16,7 +16,7 @@ export default {
             "GET_STORE_API"// подключении к api
         ])
   },
-  created() {
+  mounted() {
     this.GET_STORE_API()
   }
 }
